@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BANKI</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body>
+    <div>
+        <div id="main-container">
+            <div id="nav" class="card">
+                <div id="nav-header" class="nav">BANKI</div>
+                <ul>
+                    <li class="active">🥴 לקוחות</li>
+                    <li>🖱️ כפתורים</li>
+                    <li>🖱️ שלא</li>
+                    <li>🖱️ עובדים</li>
+                    <li>🖱️ ואפשר</li>
+                    <li>🖱️ סתם</li>
+                    <li>🖱️ ללחוץ</li>
+                    <li>🖱️ עליהם</li>
+                    <li>🖱️ ככה</li>
+                    <li>🖱️ בשביל</li>
+                    <li>🖱️ הכיף</li>
+                </ul>
+            </div>
+            <div id="content-area">
+                <div id="top-bar" class="card nav">
+                    <div>
+                        🏦 מערכת מתקדמת לבנקאי</div>
+                    <div class="clickable">📝 📧 🔍</div>
+                </div>
+                <div id="content">
+                    <div id="users-area">
+                        <div class="header">לקוחות</div>
+                        <ul id="users-list" class="card content-card"></ul>
+                    </div>
+                    <div id="accounts-area">
+                        <div class="header">חשבונות</div>
+                        <ul id="accounts-list" class="content-card">
+                            <li class=" account-number">לא נבחר לקוח</li>
+                            
+                        </ul>
+                        <!-- <div class="line"></div> -->
+                    </div>
+                    <div id="transactions-area">
+                        <div class="header">תנועות בחשבון</div>
+                        <div id="transactions-content" class="amount" style="display: none;">
+                            <!-- <span>😃</span> -->
+                        </div>
+                        <ul id="transactions-list">
+                            <li class=" account-number">לא נבחר חשבון</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>

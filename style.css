@@ -1,0 +1,319 @@
+:root {
+    --surface: #f0eee4;
+    --surfaceDark: #e2dfd4;
+    --cardBg: #ffffff;
+    --cardGap: 2.5%;
+    --headerColor: #dbd3c5;
+  }
+  body{
+    direction: rtl;
+    background-color: rgb(231, 196, 79);
+    width: 76vw;
+    height: 80vh;
+    margin: 8vh 12vw;
+    
+}
+.card{
+    background-color: var(--cardBg);
+}
+.content-card{
+    border-radius: 5px;
+    min-height: 40px;
+}
+#main-container{
+    box-shadow: 5px 10px 5px #88888842;
+    width: 100%;
+    height: 80vh;
+    /* border: 2px solid; */
+    display: flex;
+    background-color: var(--surface);
+    border-radius: 0 0 0 5px;
+}
+#nav{
+    width: 170px;
+    overflow: hidden;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+#nav-header{
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+    color: orange;
+    font-size: large;
+}
+ul {
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#nav li {
+    padding: 15px;
+    appearance: none;
+    color: gray;
+    transition: all 0.3s;
+    border-right: 4px solid rgba(255, 255, 255, 0);
+}
+#nav li:hover:not(.active) {
+    border-right: 4px solid orange;
+    cursor: pointer;
+    background-image: linear-gradient(to left, var(--surfaceDark), var(--surface));
+
+}
+#nav li.active{
+    border-right: 4px solid orange;
+    cursor: default;
+    background-color: var(--surface) !important;
+}
+
+#top-bar{
+    padding:  0 15px;
+    margin-right: 10px;
+    font-size: 130%;
+    /* border: 2px solid; */
+}
+.header{
+    font-size: x-large;
+    color: var(--headerColor);
+    padding: 3px 0;
+}
+.clickable{
+    cursor: pointer;
+}
+#content{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content:space-around;
+}
+#accounts-area {
+    width: 30%;
+}
+#content-area{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: calc(var(--cardGap));
+}
+#transactions-area{
+    width: 40%;
+
+}
+#users-area{
+    width: 20%;
+}
+.user-item *{
+    pointer-events: none
+}
+.active-user-item{
+    background-color: var(--surface);
+}
+#users-area{
+    height: 100%;
+}
+#users-list{
+    overflow-x: hidden;
+    height: 100%;
+}
+#users-list .user-item{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap: 7px;
+    padding: 10px;
+    cursor: pointer;
+    transform: scaleX(1);
+    transition:all 0.2s;
+}
+#users-list .user-item:hover:not(.active-user-item){
+    transform: translateX(-10px) translateY(-3px);
+    transform-style: left;
+}
+.active-user-item{
+    background-color: var(--surface);
+    cursor: default !important;
+    color: gray;
+}
+.user-avatar{
+    background-color: rgba(255, 166, 0, 0.562);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#accounts-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.account-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer ;
+    padding: 12px 0px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 0px solid orange ;
+}
+.account-item:not(.not-active):not(.active-account-item):hover{
+    background-color: rgba(255, 209, 140, 0.247);
+    /* font-size: 105%; */
+    box-shadow: 3px 3px 3px #88888842;
+    
+}
+.account-item *{
+    pointer-events: none;
+}
+.account-item:has(.not-active){
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default !important;
+    background-color: rgba(95, 61, 61, 0.075);
+}
+.account-number{
+    opacity: 0.7;
+    color: gray;
+    font-style: italic;
+    padding: 2px;
+}
+.money-bag{
+    font-size: 25px;
+}
+.is-account-active{
+    border-radius:10px;
+    width: 70px;
+    text-align: center;
+    padding: 3px 0;
+    color: rgb(77, 77, 77);
+}
+.is-account-active.active{
+    background-color: rgba(75, 224, 75, 0.678);
+}
+.is-account-active.not-active{
+    background-color: rgba(224, 85, 75, 0.678);
+}
+.active-account-item{
+    background-color: rgba(255, 209, 140, 0.247);
+    border: 1px solid orange;
+    cursor: pointer;
+    pointer-events: none !important;
+}
+.line{
+    width: 90%;
+    height: 2px;
+    margin: 7px 5%  ;
+    border-radius: 2px;
+    background-color: rgba(110, 110, 110, 0.397);
+}
+#transactions-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: scroll;
+    height: 83%;
+}
+.transaction-item:hover{
+    box-shadow: 3px 3px 3px #88888842;
+}
+.transaction-item{
+    transition: all 0.2s;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    cursor: default;
+    background-color: white;
+    border-radius: 10px;
+}
+.transaction-tags-list{
+    display: flex;
+    gap: 4px;
+}
+.transaction-item:nth-child(odd){
+    background-color: rgb(255, 248, 233);
+}
+.tag{
+    background-color: rgb(172, 192, 197);
+    padding: 2px 7px;
+    border-radius: 10px;
+    cursor: default;
+}
+.minus>.tag{
+    background-color: rgb(241, 130, 102);
+
+}
+.plus>.tag{
+    background-color: rgb(118, 236, 118) !important;
+}
+.tag:hover{
+    opacity: 0.6;
+}
+#transactions-content{
+    gap: 4px;
+    padding: 20px;
+    align-items: center;
+    font-size: 160%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.amount{
+    direction: ltr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* scrollbar: */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--surface);
+    width: 7px; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+      border-radius: 15px;
+    background: rgba(241, 179, 109, 0.377); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+      background: rgba(241, 179, 109, 0.747); 
+  }
+
+  @font-face {
+    font-family: myFont;
+    src: url(yehudaclm-light-webfont.woff);
+ }
+
+ * {
+    font-family: myFont;
+ }
