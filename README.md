@@ -37,6 +37,3 @@ We welcome contributions to the Bank App project! If you have an idea for a new 
 This project is licensed under the [MIT License](LICENSE).
 
 We hope you enjoy using our app and find it helpful in managing your finances!
-
-Sincerely,
-[Your Bank]
