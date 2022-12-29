@@ -9,6 +9,8 @@ Welcome to our bank app! This app is designed to make managing your financial ac
 
 Check out a live demo of the app at [https://oriyaf1.github.io/banki/](https://oriyaf1.github.io/banki/).
 
+![screenshot of bank app](https://raw.githubusercontent.com/oriyaf1/banki/main/so.JPG)
+
 ## 💰 Features 💰
 - View account balances and transaction history
 - Transfer money between accounts
